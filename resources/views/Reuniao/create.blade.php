@@ -18,7 +18,7 @@
                         <input type="time" class="form-control" id="horario_inicial" name="horario_inicial">
                     </section>
                     <section>
-                        <label for="horario_inicial" class="col-sm-2 col-form-label">Hora Inicial</label>
+                        <label for="horario_inicial" class="col-sm-2 col-form-label">Hora Final</label>
                         <input type="time" class="form-control" id="horario_inicial" name="horario_inicial">
                     </section>
                     <section class="my-3">

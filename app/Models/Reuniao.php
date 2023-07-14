@@ -6,7 +6,10 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Reuniao extends Model
+
 {
+    protected $table = "reunioes";
+
     protected $fillable = [
         'id_solicitante',
         'id_sala',

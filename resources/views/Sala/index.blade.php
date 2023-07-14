@@ -1,22 +1,26 @@
-<x-layout title="Usuários">
+<x-layout title="Salas">
+
     <div class="row m-2">
-        <div class="col-md-12 text-end "><a href="/usuarios/create" class="btn btn-primary">Adicionar Usuário</a></div>
-        @foreach ($usuarios as $data)
-        <div class="col-md-3 col-sm-3">
+        <div class="col-md-12 text-end "><a href="/salas/create" class="btn btn-primary">Adicionar Sala</a></div>
+        @foreach ($salas as $data)
+        <div class="col-md-3 col-sm-3 mt-3">
             <section class="card  p-2">
                 <div class="card-body">
-                    <p class="card-text"><span class="fw-semibold">Nome:</span> {{$data->nome_usuario}}</p>
-                    <p class="card-text"><span class="fw-semibold">Email:</span> {{$data->email_usuario}}</p>
-                    <p class="card-text"><span class="fw-semibold">Perfil:</span>
-                        {{$data->perfis->descricao_perfil}}
+                    <p class="card-text"><span class="fw-semibold">Nome da Sala:</span> {{$data->nome_sala}}</p>
+                    <p class="card-text"><span class="fw-semibold">Horário de Abertura:</span>
+                        {{$data->horario_abertura}}
                     </p>
+                    <p class="card-text"><span class="fw-semibold">Horário de Fechamento:</span>
+                        {{$data->horario_fechamento}}
+                    </p>
+
                 </div>
                 <section class="ms-3">
                     <div class="row">
-                        <div class="col-md-2 col-sm-12"><a href="{{ route('usuarios.edit', $data->id) }}"
+                        <div class="col-md-2 col-sm-12"><a href="{{ route('salas.edit', $data->id) }}"
                                 class="btn btn-warning text-light">Editar</a></div>
                         <div class="col-md-3 col-sm-12">
-                            <form method="POST" class="form" action="{{ route('usuarios.destroy', $data->id) }}">
+                            <form method="POST" class="form" action="{{ route('salas.destroy', $data->id) }}">
                                 @csrf
                                 <button type="submit" value="Excluir" class="btn btn-danger">Excluir</button>
 
@@ -26,9 +30,13 @@
                     </div>
                 </section>
             </section>
+
         </div>
+
         @endforeach
     </div>
+    </div>
+
 </x-layout>
 <div aria-live="polite" aria-atomic="true" class="position-relative" style="top:-500px;">
     <!-- Position it: -->

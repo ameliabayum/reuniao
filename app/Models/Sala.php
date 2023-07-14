@@ -11,7 +11,7 @@ class Sala extends Model
         'nome_sala',
         'horario_abertura',
         'horario_fechamento',
-        'id_usuario_create',
+     
         
     ];
 

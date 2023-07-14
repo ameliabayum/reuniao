@@ -16,7 +16,6 @@ return new class extends Migration
             $table->string('nome_sala');
             $table->time('horario_abertura');
             $table->time('horario_fechamento');
-            $table->foreignId('usuario_id')->constrained('usuarios');
             $table->timestamps();
         });
     }

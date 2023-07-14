@@ -12,7 +12,9 @@ class DatabaseSeeder extends Seeder
     {
         //Inserindo Perfis
         DB::table('perfils')->insert([
-            'descricao_perfil' => 'Administrador',
+            'descricao_perfil' => 'Administrador',         
+         ]);
+         DB::table('perfils')->insert([        
             'descricao_perfil' => 'Usuario'
          ]);
         //Inserindo Primeiro Usuário

@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('usuario_id')->constrained('usuarios');
             $table->foreignId('sala_id')->constrained('salas');
+            $table->string('tema_reuniao');
             $table->date('data_reuniao');
             $table->time('horario_inicio');
             $table->time('horario_termino');
